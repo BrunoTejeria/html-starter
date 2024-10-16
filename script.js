@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const compuestos = [
-        { nombre: "Metanal", grupo: "Aldehído", formula: "HCHO", funcion: "Conservante", img: "Metanal.jpeg" },
-        { nombre: "Propanona", grupo: "Cetona", formula: "CH3COCH3", funcion: "Solvente", img: "Propanona.jpeg" },
-        { nombre: "Etanol", grupo: "Alcohol", formula: "C2H5OH", funcion: "Bebida alcohólica", img: "Etanol.jpeg" },
-        { nombre: "Butanal", grupo: "Aldehído", formula: "C4H8O", funcion: "Producción de resinas", img: "Butanal.jpeg" },
-        { nombre: "Butanona", grupo: "Cetona", formula: "C4H8O", funcion: "Solvente industrial", img: "Butanona.jpeg" },
-        { nombre: "Metanol", grupo: "Alcohol", formula: "CH3OH", funcion: "Combustible", img: "Metanol.jpeg" },
+        { nombre: "Metanal", grupo: "Aldehído", formula: "HCHO", funcion: "Conservante", img: "metanal.jpeg" },
+        { nombre: "Propanona", grupo: "Cetona", formula: "CH3COCH3", funcion: "Solvente", img: "propanona.jpeg" },
+        { nombre: "Etanol", grupo: "Alcohol", formula: "C2H5OH", funcion: "Bebida alcohólica", img: "etanol.jpeg" },
+        { nombre: "Butanal", grupo: "Aldehído", formula: "C4H8O", funcion: "Producción de resinas", img: "butanal.jpeg" },
+        { nombre: "Butanona", grupo: "Cetona", formula: "C4H8O", funcion: "Solvente industrial", img: "butanona.jpeg" },
+        { nombre: "Metanol", grupo: "Alcohol", formula: "CH3OH", funcion: "Combustible", img: "metanol.jpeg" },
     ];
 
     let puntosJugador1 = 0;
@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const preguntaEl = document.getElementById('pregunta');
     const cartasEl = document.getElementById('cartas');
     const imgContainer = document.getElementById('img-container');
-    const img = document.getElementById('img');
     const puntuacionEl = document.getElementById('puntuacion');
 
     // Función para iniciar el juego
