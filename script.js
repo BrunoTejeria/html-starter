@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const compuestos = [
-        { nombre: "Metanal", grupo: "Aldehído", formula: "HCHO", funcion: "Conservante", img: "metanal.png" },
-        { nombre: "Propanona", grupo: "Cetona", formula: "CH3COCH3", funcion: "Solvente", img: "propanona.png" },
-        { nombre: "Etanol", grupo: "Alcohol", formula: "C2H5OH", funcion: "Bebida alcohólica", img: "etanol.png" },
-        { nombre: "Butanal", grupo: "Aldehído", formula: "C4H8O", funcion: "Producción de resinas", img: "butanal.png" },
-        { nombre: "Butanona", grupo: "Cetona", formula: "C4H8O", funcion: "Solvente industrial", img: "butanona.png" },
-        { nombre: "Metanol", grupo: "Alcohol", formula: "CH3OH", funcion: "Combustible", img: "metanol.png" },
+        { nombre: "Metanal", grupo: "Aldehído", formula: "HCHO", funcion: "Conservante", img: "metanal.jpeg" },
+        { nombre: "Propanona", grupo: "Cetona", formula: "CH3COCH3", funcion: "Solvente", img: "propanona.jpeg" },
+        { nombre: "Etanol", grupo: "Alcohol", formula: "C2H5OH", funcion: "Bebida alcohólica", img: "etanol.jpeg" },
+        { nombre: "Butanal", grupo: "Aldehído", formula: "C4H8O", funcion: "Producción de resinas", img: "butanal.jpeg" },
+        { nombre: "Butanona", grupo: "Cetona", formula: "C4H8O", funcion: "Solvente industrial", img: "butanona.jpeg" },
+        { nombre: "Metanol", grupo: "Alcohol", formula: "CH3OH", funcion: "Combustible", img: "metanol.jpeg" },
     ];
 
     let puntosJugador1 = 0;
@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const iniciarBtn = document.getElementById('iniciar-btn');
     const preguntaEl = document.getElementById('pregunta');
     const cartasEl = document.getElementById('cartas');
+    const imgContainer = document.getElementById('img-container');
+    const img = document.getElementById('img');
     const puntuacionEl = document.getElementById('puntuacion');
 
     // Función para iniciar el juego
@@ -36,8 +38,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         compuestoActual = compuestos[Math.floor(Math.random() * compuestos.length)];
 
         // Limpiar las opciones anteriores
-        cartasEl.innerHTML = ''; 
-
+        cartasEl.innerHTML = '';
+        imgContainer.innerHTML = '';
+        const imgElement = document.createElement('img');
+        imgElement.src = `public/${compuestoActual.img}`;
+        imgElement.className = "img";
+        imgContainer.appendChild(imgElement);
         if (fase === "identificacion") {
             preguntaEl.textContent = `Fórmula: ${compuestoActual.formula} - ¿Cuál es su grupo funcional?`;
             mostrarOpciones(["Aldehído", "Cetona", "Alcohol"]);
