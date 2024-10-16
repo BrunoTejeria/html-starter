@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         cartasEl.innerHTML = '';
         imgContainer.innerHTML = '';
         const imgElement = document.createElement('img');
-        imgElement.src = `/${compuestoActual.img}`;
+        imgElement.src = `https://html-starter-ten-dusky.vercel.app/${compuestoActual.img}`;
         imgElement.className = "img";
         imgContainer.appendChild(imgElement);
         if (fase === "identificacion") {
